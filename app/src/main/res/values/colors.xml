@@ -6,4 +6,5 @@
     <color name="colorTextPrimary">#727272</color>
     <color name="colorTextPrimaryDark">#212121</color>
     <color name="colorWindowBackground">#FAFAFA</color>
+  <color name="TitleColor">#FFFFFF</color>
 </resources>

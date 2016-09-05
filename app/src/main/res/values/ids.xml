@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item name="toolbar" type="id"/>
+  <item name="item" type="id"/>
+  <item name="app_list" type="id"/>
+  <item name="back_arrow" type="id"/>
+  <item name="toolbar_title" type="id"/>
+  <item name="save" type="id"/>
+  <item name="config_name" type="id"/>
+  <item name="disable_not" type="id"/>
+  <item name="filter_notify" type="id"/>
+  <item name="filter_all_notify" type="id"/>
+  <item name="disable_notify" type="id"/>
+  <item name="dismiss_notify" type="id"/>
+  <item name="mute_notify" type="id"/>
+  <item name="hide_notify" type="id"/>
+  <item name="app_list_recycler" type="id"/>
+  <item name="select_apps" type="id"/>
+</resources>
