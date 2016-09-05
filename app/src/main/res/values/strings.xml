@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PoleStar</string>
+  <string name="app_name">Pole Star</string>
   <string name="add_config">Add Configuration</string>
   <string name="disable_all_heads_up_notifications">Disable all Heads-up Notifications</string>
   <string name="app_selection">App Selection</string>
