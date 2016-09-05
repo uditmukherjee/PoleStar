@@ -19,7 +19,7 @@
           android:layout_height="wrap_content"
           android:textAppearance="?android:attr/textAppearanceLarge"
           tools:text="Reading Mode"
-          android:textSize="20sp"
+          android:textSize="@dimen/text_size_large"
           android:id="@+id/config_title"
           android:textColor="@color/colorTextPrimary"
           android:layout_marginTop="@dimen/activity_default_margin_left"
@@ -43,9 +43,9 @@
           android:layout_height="1dp"
           android:layout_marginTop="8dp"
           android:layout_marginBottom="8dp"
-          android:background="#E0E0E0"
+          android:background="@color/dividerColorLight"
           android:layout_below="@id/filters_title"
-          android:id="@+id/include"
+          android:id="@+id/config_divider"
           />
       <Button
           style="?android:attr/borderlessButtonStyle"
@@ -53,8 +53,8 @@
           android:layout_height="wrap_content"
           android:text="Start"
           android:textColor="@color/colorPrimary"
-          android:id="@+id/button"
-          android:layout_alignTop="@+id/include"
+          android:id="@+id/start_config_button"
+          android:layout_alignTop="@+id/config_divider"
           android:layout_alignParentEnd="true"
           />
     </RelativeLayout>
