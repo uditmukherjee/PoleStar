@@ -8,4 +8,9 @@
         <item name="android:textColorPrimary">@color/colorTextPrimary</item>
     </style>
 
+  <style name="CheckBoxStyle">
+    <item name="android:buttonTint">@color/colorTextPrimary</item>
+    <item name="android:textColor">@color/colorTextPrimary</item>
+  </style>
+
 </resources>

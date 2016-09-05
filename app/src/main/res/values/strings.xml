@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PoleStar</string>
+  <string name="add_config">Add Configuration</string>
+  <string name="disable_all_heads_up_notifications">Disable all Heads-up Notifications</string>
+  <string name="app_selection">App Selection</string>
+  <string name="select_apps">Select Apps</string>
+  <string name="selected_apps">Selected Apps</string>
 </resources>
