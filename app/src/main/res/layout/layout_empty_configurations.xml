@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        app:title="@string/app_name"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        style="@style/app_bar_style">
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:text="Create Configuration"
+        android:textAllCaps="false"
+        android:background="@drawable/rounded_blue_button"
+        android:id="@+id/button_create_config_empty_config"
+        android:layout_centerVertical="true"
+        android:elevation="4dp"
+        android:letterSpacing="1.5"
+        android:textSize="@dimen/text_size_medium"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Your Configurations will appear here"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_large"
+        android:letterSpacing="1.5"
+        android:id="@+id/textView_title_empty_config"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_above="@+id/button_create_config_empty_config"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
