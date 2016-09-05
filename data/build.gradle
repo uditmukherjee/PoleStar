@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'com.neenbedankt.android-apt'
 
 def config = rootProject.ext.configuration
@@ -7,7 +7,6 @@ android {
   buildToolsVersion config.buildToolsVersion
 
   defaultConfig {
-    applicationId config.package
     minSdkVersion config.minSdk
     targetSdkVersion config.targetSdk
     versionCode config.versionCode
@@ -18,27 +17,17 @@ android {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    debug {}
   }
 }
 
 dependencies {
-  def supportDependencies = rootProject.ext.supportLibraryDependencies
   def testDependencies = rootProject.ext.testDependencies
   def developmentDependencies = rootProject.ext.developmentDependencies
+  def supportDependencies = rootProject.ext.supportLibraryDependencies
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile developmentDependencies.butterknife
-  apt developmentDependencies.butterknifeCompiler
 
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile project(':data')
-
-  compile supportDependencies.appcompat_v7
-  compile supportDependencies.design
-  compile supportDependencies.recyclerview
   compile supportDependencies.annotations
-  compile supportDependencies.cardview
 
   // testing
   testCompile testDependencies.junit
