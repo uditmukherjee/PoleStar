@@ -1,8 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'realm-android'
 
-def config = rootProject.ext.configuration
 android {
+  def config = rootProject.ext.configuration
+
   compileSdkVersion config.compileSdkVersion
   buildToolsVersion config.buildToolsVersion
 
@@ -12,12 +15,28 @@ android {
     versionCode config.versionCode
     versionName config.versionName
   }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
   buildTypes {
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+  packagingOptions {
+    exclude 'LICENSE.txt'
+    exclude 'META-INF/DEPENDENCIES'
+    exclude 'META-INF/ASL2.0'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+}
+
+retrolambda {
+  jdk System.getenv("JAVA8_HOME") ?: getJavaHome("1.8")
+  oldJdk System.getenv("JAVA7_HOME") ?: getJavaHome("1.7")
 }
 
 dependencies {
@@ -32,3 +51,16 @@ dependencies {
   // testing
   testCompile testDependencies.junit
 }
+
+/*
+ * Making retrolambda work in any platform.
+ */
+String getJavaHome(String version) {
+  def stdout = new ByteArrayOutputStream()
+  exec {
+    commandLine "/usr/libexec/java_home", "-v", version
+    standardOutput = stdout;
+  }
+  return stdout.toString().trim()
+}
+
