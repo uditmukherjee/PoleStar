@@ -25,9 +25,11 @@ android {
 dependencies {
   def supportDependencies = rootProject.ext.supportLibraryDependencies
   def testDependencies = rootProject.ext.testDependencies
+  def developmentDependencies = rootProject.ext.developmentDependencies
+
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.jakewharton:butterknife:8.4.0'
-  apt 'com.jakewharton:butterknife-compiler:8.4.0'
+  compile developmentDependencies.butterknife
+  apt developmentDependencies.butterknifeCompiler
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
