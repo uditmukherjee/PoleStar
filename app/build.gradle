@@ -35,6 +35,7 @@ dependencies {
   compile supportDependencies.design
   compile supportDependencies.recyclerview
   compile supportDependencies.annotations
+  compile supportDependencies.cardview
 
   // testing
   testCompile testDependencies.junit
