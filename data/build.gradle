@@ -48,6 +48,12 @@ dependencies {
 
   compile supportDependencies.annotations
 
+  // Dagger for dependency injection
+  apt developmentDependencies.daggerCompiler
+  compile developmentDependencies.dagger
+  provided developmentDependencies.javaxAnnotation
+
+
   // testing
   testCompile testDependencies.junit
 }

@@ -58,6 +58,12 @@ dependencies {
   compile supportDependencies.annotations
   compile supportDependencies.cardview
 
+  // Dagger for dependency injection
+  apt developmentDependencies.daggerCompiler
+  compile developmentDependencies.dagger
+  provided developmentDependencies.javaxAnnotation
+
+
   // testing
   testCompile testDependencies.junit
 }
