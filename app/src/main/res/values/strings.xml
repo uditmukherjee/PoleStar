@@ -6,4 +6,5 @@
   <string name="select_apps">Select Apps</string>
   <string name="selected_apps">Selected Apps</string>
   <string name="configuration_name">Configuration Name</string>
+  <string name="service_name">notification service</string>
 </resources>
