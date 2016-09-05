@@ -38,5 +38,4 @@ dependencies {
 
   // testing
   testCompile testDependencies.junit
-
 }
