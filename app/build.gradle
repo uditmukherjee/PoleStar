@@ -63,6 +63,7 @@ dependencies {
   compile developmentDependencies.dagger
   provided developmentDependencies.javaxAnnotation
 
+  compile developmentDependencies.rxAndroid
 
   // testing
   testCompile testDependencies.junit
