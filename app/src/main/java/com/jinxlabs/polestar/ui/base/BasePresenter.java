@@ -1,4 +1,4 @@
 package com.jinxlabs.polestar.ui.base;
 
-public interface BasePresenter
+public interface BasePresenter {
 }
